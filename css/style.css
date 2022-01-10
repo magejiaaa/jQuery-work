@@ -1,0 +1,497 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*自己的css*/
+
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+h1, h2 , p, span{
+	font-family: 'Noto Sans TC', Arial ;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.wrap{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.scrolltop{
+	position: fixed;
+	right: 3%;
+	bottom: 5%;
+	width: 50px;
+	height: 50px;
+	background-color: #009872;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+.scrolltop a{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+.headertop{
+	position: fixed;
+	top: 0;
+	z-index: 100;
+    width: 100%;
+	background: #f6f6f6;
+}
+.sns{
+	padding: 5px;
+	float: right;
+}
+.sns li{
+	float: left;
+}
+.sns a{
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+.sns img{
+	margin-right: 5px;
+}
+.facebook{
+	color:#465f9f;
+	line-height: 20px;
+}
+.twitter{
+	color: #0aabfb;
+	line-height: 20px;
+	border-left: 1px solid #808080;
+}
+.twitter:hover{
+	color:#006ba0;
+}
+.facebook:hover{
+	color:#152a61;
+}
+.clearfix{
+	clear: both;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	width: 100%;
+}
+.header h1{
+	width: 22.4%;
+}
+.logo{
+	display: block;
+	width: 224px;
+	height: 51px;
+	background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png);
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.menu{
+	display: flex;
+	align-items: center;
+}
+.menu li:hover{
+	border-bottom:3px solid #0c9;
+}
+.menu li{
+	border-bottom: 3px solid transparent;
+	position: relative;
+	width: 100px;
+}
+.menu a{
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	color: #0c9;
+	padding: 16px 20px;
+	text-align: center;
+}
+.menu .active{
+	border-bottom:3px solid #0c9;
+}
+.childmenu{
+	display: flex;
+}
+.childmenu li{
+	width: 100px;
+	background-color: #fff;
+	border-bottom:none;
+}
+.childmenu li:hover{
+	border-bottom:none;
+}
+
+.childmenu a:hover{
+	background-color: #009872;
+	color: #fff;
+}
+
+.menu >li >ul{
+	display: flex;
+	flex-direction: column;
+    position: absolute;
+	top: 50px;
+}
+.showmenu{
+    display: none;
+}
+
+/*選單收合狀態*/
+.menu .childmenu{
+	display: none;
+}
+
+
+.banner{
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	margin-bottom: 65px;
+	margin-top: 82px;
+}
+.banner-1, .banner-2, .banner-3{
+	background: url("https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png") center center;
+	background-size:cover;
+}
+.swiper {
+	width: 100%;
+	height: 414px;
+	animation-duration: 500ms;
+  }
+
+.banner img{
+	z-index: -1;
+	width: 100%;
+}
+.banner_rect{
+	padding:  40px 16px; 
+	color: white;
+	font-size: 36px;
+	background: rgba(0, 0, 0, 15%);
+	position: absolute;
+    width: 100%;
+    top: 30%;
+	z-index: 2;
+}
+.course{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 64px;
+}
+
+.item , .jQuery{
+	width: 30%;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	box-shadow: 0 3px 3px #b1b1b1;
+	text-align: center;
+}
+
+.course h2{
+	font-size: 18px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.course p{
+	font-size: 15px;
+	padding:0 20px 20px 20px;
+	line-height: 22px;
+	text-align: left;
+}
+
+.course img{
+	display: block;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+.jQuery p{
+	padding: 0 20px;
+	line-height: 22px;
+}
+.jQuery li{
+	list-style: disc;
+	line-height: 22px;
+	margin-left: 41px;
+	text-align: left;
+	padding-right: 20px;
+}
+.table table{
+	width: 70%;
+	margin: 0 auto;
+}
+.table{
+	margin-bottom: 60px;
+}
+.table h2, .form h2{
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 30px;
+}
+.table th, .table td{
+	padding: 9px 23px;
+	text-align: left;
+	border-top: 1px solid #ddd ;
+	border-bottom: 1px solid #ddd ;
+	font-size: 15px;
+}
+.table th{
+	color: #333;
+	background: #f7f7f7;
+}
+.greenword{
+	color: #00a67d;
+}
+.lightboxpic{
+	text-align: center;
+}
+.lightboxpic a{
+	color: transparent;
+}
+
+.form{
+	background: linear-gradient(#00644b,#009872);
+	padding: 30px 20px;
+	margin-top: 50px;
+}
+.form h2{
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+	color: white;
+	padding-top: 8px;
+}
+.enter form{
+	display: flex;
+}
+.space{
+	width: 50%;
+	background: white;
+	margin-right: 20px;
+	border-radius: 3px;
+	border: none;
+	padding: 10px;
+}
+
+.import {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 0 20px;
+	width: 50%;
+}
+.import label, .import input, .space input{
+	display: block;
+	font-size: 15px;
+	width: 100%;
+}
+.import label{
+	color: white;
+	margin-bottom: 7px;
+}
+.import input{
+	margin-bottom: 17px;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+}
+.import .btn{
+	padding: 9px 20px;
+	width: auto;
+	background: #00cc99;
+	color: white;
+	margin: 0px;
+}
+.import .btn:hover{
+	background: #00a87e;
+	cursor: pointer
+}
+.footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding: 29px 20px 54px 20px;
+}
+.footer span{
+	color: gray;
+	line-height: 1.5;
+}
+.footer a{
+	color: rgb(248, 14, 104);
+	text-decoration: none;
+}
+.footer a:hover{
+	color:#808080;
+}
+
+@media (max-width:768px) {
+	.header{
+		flex-wrap: wrap;
+	}
+	.header h1{
+		width: 40%;
+	}
+	.logo{
+		background-repeat: no-repeat;
+	}
+	.showmenu{
+        display: block;
+        text-decoration: none;
+        padding: 15px;
+        color: #009872;
+    }
+	.menu{
+        max-height: 0px;
+        overflow: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 81px;
+        text-align: center;
+        transition: max-height 1.3s;
+        width: 100%;
+        color: #009872;
+    }
+	.menu li{
+        width: 100%;
+		border-bottom: none;
+		background: white;
+    }
+	.menu li:hover{
+		border-bottom: none;
+	}
+	.active a{
+		border-bottom: 2px solid #0c9;
+		width: 80%;
+    	margin: 0 auto;
+	}
+	.childmenu a{
+		border-bottom: none;
+	}
+    .menu-show .menu{
+        max-height: 600px;
+      }
+	.active .childmenu{
+		width: 100%;
+		position: revert;
+	}
+	.banner{
+		margin-bottom: 5%;
+	}
+	.banner_rect{
+		padding: 4%;
+		font-size: 1.8em;
+	}
+	.course{
+		flex-wrap: wrap;
+	}
+	.item, .jQuery{
+		width: 45%;
+		margin-bottom: 20px;
+	}
+	.jQuery ul{
+		padding-bottom: 20px;
+	}
+	.table table{
+		width: 80%;
+	}
+	.import{
+		padding: 0;
+	}
+	.table th, .table td{
+		padding: 9px 10px;
+	}
+	.footer{
+		flex-wrap: wrap;
+	}
+	.footer img{
+		padding-right: 5%;
+	}
+}
+
+@media (max-width:375px) {
+	.swiper {
+		width: 100%;
+		height: 300px;
+	}
+	.banner_rect{
+		font-size: 1.4em;
+		line-height: 1.5em;
+	}
+	.item, .jQuery{
+		width: 80%;
+	}
+	.table table {
+		width: 95%;
+	}
+	.enter form{
+		flex-direction: column;
+	}
+	.space{
+		width: 100%;
+    margin-bottom: 20px;
+	height: 190px;
+	}
+	.import{
+		width: 100%;
+	}
+	.footer{
+		flex-direction: column;
+		padding: 29px 20px 20px 20px;
+	}
+	.footer img{
+		padding-bottom: 5%;
+	}
+}
